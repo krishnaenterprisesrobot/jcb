@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KRISHNA ENTERPRISES — Products</title>
+  <link rel="icon" href="./logo.png" type="image/png" />
+  
+  <link rel="stylesheet" href="./css/pdf.css" />
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+</head>
+<body class="no-scroll">
+
+  <header class="pdf-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="./logo.png" alt="logo" class="logo" />
+        <div class="brand-text">
+          <h1>KRISHNA ENTERPRISES</h1>
+          <p>Products</p>
+        </div>
+      </a>
+      
+      <div class="nav-search-wrapper">
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+        </nav>
+        
+        <div class="search-container">
+          <svg class="search-icon" viewBox="0 0 24 24">
+            <path d="M21.71 20.29l-5.01-5.01C17.54 13.93 18 12.03 18 10c0-4.42-3.58-8-8-8S2 5.58 2 10s3.58 8 8 8c2.03 0 3.93-.46 5.29-1.29l5.01 5.01c.39.39 1.02.39 1.41 0 .38-.39.39-1.03 0-1.42zM4 10c0-3.31 2.69-6 6-6s6 2.69 6 6-2.69 6-6 6-6-2.69-6-6z"/>
+          </svg>
+          <input type="text" id="pdf-search" class="search-input" placeholder="Search products..." />
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <div id="loading-overlay">
+    <img src="./loading.gif" id="loading-gif" alt="loading" />
+    <div id="loading-text">Loading…</div>
+    <div id="loading-percent">0%</div>
+  </div>
+
+  <div id="pdf-container" class="container"></div>
+
+  <script src="./js/pdf-script.js"></script>
+</body>
+</html>

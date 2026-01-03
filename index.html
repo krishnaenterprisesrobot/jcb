@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KRISHNA ENTERPRISES</title>
+  <link rel="icon" href="./logo.png" type="image/png" />
+  <link rel="stylesheet" href="./css/home.css" />
+</head>
+<body class="loading">
+
+  <div id="preloader">
+    <video autoplay muted playsinline>
+      <source src="./images/tra/logg.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="bg-container">
+    <div class="bg-image img-1"></div>
+    <div class="bg-image img-2"></div>
+    <div class="bg-overlay"></div>
+  </div>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="./logo.png" alt="Krishna Enterprises" class="logo" />
+        <div class="brand-text">
+          <h1>KRISHNA ENTERPRISES</h1>
+          <p class="tag">Complete Range of all JCB & Hitachi Spares</p>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h2>Spare parts for every jobsite</h2>
+          <p>High quality JCB & Hitachi spares. Fast dispatch from Bangalore.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="products.html">View Products</a>
+            <a class="btn ghost" href="https://maps.app.goo.gl/fMu3rjSuRhcPb2kQ8" target="_blank">Direct to Store</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h3>📍 Visit Us</h3>
+          <div class="contact-block address-block">
+            <p># 14, 59/A, 4th 'H' Cross,<br>St. Joseph Nivas Road,</p>
+            <p>Chikkamanahalli, Gottigere Post,<br>B.G. Road, Bangalore - 560 083</p>
+          </div>
+          
+          <div class="divider"></div>
+
+          <h3>📞 Call Us</h3>
+          <div class="contact-block phone-block">
+            <p><a href="mailto:krishna.enterprises1459a@gmail.com">krishna.enterprises1459a@gmail.com</a></p>
+            
+            <div class="phone-grid">
+              <a href="tel:07676874498">07676874498</a>
+              <a href="tel:08951533446">08951533446</a>
+              <a href="tel:09448354944">09448354944</a>
+              <a href="tel:08066045354">08066045354</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features container">
+      <h3>What we supply</h3>
+      <ul class="feature-list">
+        <li>Engine Oil & transmission components</li>
+        <li>Hydraulic pumps, cylinders, valves</li>
+        <li>Undercarriage & JCB parts</li>
+        <li>Electrical Switches & Lights</li>
+        <li>Filters, seals, bearings & consumables</li>
+        <li>Cleaning Acids & JCB Tyres</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="container contact-section">
+      <h3>Enquiry</h3>
+      <p>Send us an email or call any of the numbers above. For the full product brochure click <a href="products.html">Products</a>.</p>
+    </section>
+
+    <section class="map-section container">
+      <h3>Find Us on Google Maps</h3>
+      <div class="map-wrapper">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.992986855059!2d77.58907937501487!3d12.866284787448188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6b586b9b8a7b%3A0x8c4b7f7e7f7e7f7e!2sKrishna%20Enterprises!5e0!3m2!1sen!2sin!4v1733674800000!5m2!1sen!2sin"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <p class="map-link">
+        <a href="https://maps.app.goo.gl/fMu3rjSuRhcPb2kQ8" target="_blank">
+          Open in Google Maps (Get Directions)
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© KRISHNA ENTERPRISES</small>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        var preloader = document.getElementById('preloader');
+        preloader.style.opacity = '0';
+        setTimeout(function() {
+          preloader.style.display = 'none';
+          document.body.classList.remove('loading');
+        }, 500);
+      }, 5000);
+    });
+  </script>
+
+</body>
+</html>

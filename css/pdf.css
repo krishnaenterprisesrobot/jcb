@@ -1,0 +1,219 @@
+/* ===========================
+   PRODUCT PAGE STYLES
+   =========================== */
+
+:root {
+  --accent1: #ffb347; /* yellowish orange */
+  --accent2: #ff7e00;
+  --black: #000;
+}
+
+/* GLOBAL */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* HEADER */
+.pdf-header {
+  width: 100%;
+  background: var(--accent1);
+  padding: 12px 0;
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.pdf-header .container {
+  width: 92%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.pdf-header .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.pdf-header .logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+}
+
+.pdf-header .brand-text {
+  text-align: left;
+}
+
+.pdf-header .brand-text h1,
+.pdf-header .brand-text p {
+  margin: 0;
+  color: var(--black);
+}
+
+/* NAV & SEARCH WRAPPER */
+.nav-search-wrapper {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.pdf-header .main-nav {
+  display: flex;
+  gap: 18px;
+}
+
+.pdf-header .main-nav a {
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.pdf-header .main-nav a:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* --- SEARCH BAR STYLES --- */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 8px 12px 8px 36px; /* Space for icon */
+  border-radius: 20px;
+  border: 1px solid rgba(0,0,0,0.2);
+  outline: none;
+  font-size: 14px;
+  width: 200px;
+  transition: all 0.3s ease;
+  background: rgba(255,255,255,0.6);
+}
+
+.search-input:focus {
+  background: #fff;
+  border-color: var(--black);
+  width: 240px; /* Expands on focus */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  width: 16px;
+  height: 16px;
+  fill: var(--black);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* PDF CONTAINER */
+#pdf-container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 24px 0;
+}
+
+/* PDF CANVASES */
+canvas {
+  width: 100%;
+  height: auto !important;
+  background: transparent !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 4px;
+}
+
+canvas.visible {
+  opacity: 1;
+}
+
+/* Search Match Highlight */
+canvas.highlight-match {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 4px var(--accent2), 0 12px 24px rgba(0,0,0,0.2);
+}
+
+/* LOADING OVERLAY */
+#loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.97);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#loading-gif {
+  width: 220px;
+  height: 220px;
+  mix-blend-mode: multiply;
+}
+
+#loading-text {
+  margin-top: 14px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+#loading-percent {
+  margin-top: 6px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0.7;
+  color: var(--black);
+}
+
+#loading-overlay.hidden {
+  display: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 750px) {
+  .pdf-header .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .nav-search-wrapper {
+    margin: 0;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search-input { width: 100%; }
+  .search-input:focus { width: 100%; }
+}
